@@ -6,8 +6,7 @@ import Repos from "./repositoryPage";
 import RepoItems from "./repoItems";
 import { Routes, Route } from "react-router-dom";
 import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
-import Home from './homPage';
-import SideBar from './sidebar'
+import Home from './homePage';
 
 export default function LandingPage() {
   const [repos, setRepos] = useState([]);
@@ -15,8 +14,9 @@ export default function LandingPage() {
   const handleError = useErrorHandler();
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
-  const [disabled, setDisabled] = useState(true)
-  const [disabled2, setDisabled2] = useState(false)
+  const [disabled, setDisabled] = useState(true);
+  const [disabled2, setDisabled2] = useState(false);
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     async function getData() {
@@ -34,6 +34,13 @@ export default function LandingPage() {
     }
     getData();
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setShow(false)
+      }, 10000);
+      return () => clearTimeout(timer);
+}, [show])
 
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -80,14 +87,13 @@ export default function LandingPage() {
           <title>Git Repo</title>
           <meta name="description" content="Get info for my repository" />
         </Helmet>
-
         
-        <Routes>
-          <Route path="/" element={<Home />} />        
-          <Route path="/repositoryPage" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} />} />
+        {show ? <Home /> : ''}
+      {!show ?  <Routes>      
+          <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} />} />
           <Route path="/repository/:repoId" element={<RepoItems />} />
           <Route path="*" element={<Noroute />} />
-        </Routes>
+        </Routes> : ""}
       </article>
       {/* <SideBar /> */}
     </ErrorBoundary>
