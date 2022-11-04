@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import Pagination from "./pagination";
+import Logo from './images/github.png';
 
 export default function Repos({
   loading,
@@ -9,14 +10,9 @@ export default function Repos({
   paginate,
   pageNumbers,
   currentPage,
+  disabled,
+  disabled2
 }) {
-  // function getName(e){
-  //     console.log(e.target)
-  // }
-
-  // let {itemId} = useParams();
-  // console.log(itemId)
-
   const reps = currentUsers.map((item) => {
     return (
       <>
@@ -30,6 +26,9 @@ export default function Repos({
   });
   return (
     <section>
+      <Link to='/'>
+                    <img src={Logo} alt="Logo" />
+                </Link>
       {loading ? reps : <p>Loading...</p>}
       <Pagination
         prev={prev}
@@ -38,6 +37,8 @@ export default function Repos({
         pageNumbers={pageNumbers}
         currentPage={currentPage}
         loading={loading}
+        disabled={disabled}
+        disabled2={disabled2}
       />
       <Outlet />
     </section>

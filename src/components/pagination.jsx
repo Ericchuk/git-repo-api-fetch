@@ -1,7 +1,7 @@
-export default function Pagination({pageNumbers, loading, paginate, next, prev}){
+export default function Pagination({pageNumbers, loading, paginate, next, prev, disabled, disabled2}){
     return (
       <ul>
-        <button onClick={prev}>Prev</button>
+        <button onClick={prev} disabled={disabled}>Prev</button>
         {loading ? pageNumbers.map((number) => {
           return (
             <li
@@ -14,7 +14,7 @@ export default function Pagination({pageNumbers, loading, paginate, next, prev})
             </li>
           );
         }) : <p>loading...</p>}
-        <button onClick={next}>Next</button>
+        <button onClick={next} disabled={disabled2}>Next</button>
       </ul>
     );
 }

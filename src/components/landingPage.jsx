@@ -4,9 +4,10 @@ import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import Repos from "./repositoryPage";
 import RepoItems from "./repoItems";
-import Home from "./home";
 import { Routes, Route } from "react-router-dom";
 import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
+import Home from './homPage';
+import SideBar from './sidebar'
 
 export default function LandingPage() {
   const [repos, setRepos] = useState([]);
@@ -14,6 +15,8 @@ export default function LandingPage() {
   const handleError = useErrorHandler();
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
+  const [disabled, setDisabled] = useState(true)
+  const [disabled2, setDisabled2] = useState(false)
 
   useEffect(() => {
     async function getData() {
@@ -52,9 +55,10 @@ export default function LandingPage() {
   function prev(e){
       if(currentPage > 1){
           setCurrentPage(currentPage - 1);
-          e.target.disabled = false;
+          setDisabled2(false)
       }else{
-          e.target.disabled = true;
+          setDisabled(true)
+          setDisabled2(false)
       }
   }
 
@@ -62,9 +66,9 @@ export default function LandingPage() {
   function next(e){
       if(currentPage < pageNumbers.length){
           setCurrentPage(currentPage + 1);
-          e.target.disabled = false;
+          setDisabled(false)
       }else{
-          e.target.disabled = true;
+          setDisabled2(true)
       }
   }
 
@@ -77,18 +81,16 @@ export default function LandingPage() {
           <meta name="description" content="Get info for my repository" />
         </Helmet>
 
-        {/* <Noroute /> */}
-        {/* <ErrorBoundary /> */}
-        <Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} />
-        {/* <RepoItems /> */}
-
+        
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/repositoryPage" element={<Repos />} />
+          <Route path="/" element={<Home />} />        
+          <Route path="/repositoryPage" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} />} />
           <Route path="/repository/:repoId" element={<RepoItems />} />
           <Route path="*" element={<Noroute />} />
         </Routes>
       </article>
+      {/* <SideBar /> */}
     </ErrorBoundary>
   );
 }
+ 
