@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
 import Home from './homePage';
 
+
 export default function LandingPage() {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,7 @@ export default function LandingPage() {
         setLoading(true);
         const response = await fetch(
           "https://api.github.com/users/ericchuk/repos"
+          // 'https://jsonplaceholder.typicode.com/users'
         );
         const data = await response.json();
         setRepos(data);
@@ -91,7 +93,7 @@ export default function LandingPage() {
         {show ? <Home /> : ''}
       {!show ?  <Routes>      
           <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} />} />
-          <Route path="/repository/:repoId" element={<RepoItems />} />
+          <Route path="/:repoId" element={<RepoItems setLoading={setLoading} setRepos={setRepos} handleError={handleError} />} />
           <Route path="*" element={<Noroute />} />
         </Routes> : ""}
       </article>

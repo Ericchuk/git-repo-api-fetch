@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export default function Pagination({pageNumbers, loading, paginate, next, prev, disabled, disabled2}){
     return (
       <ul>
@@ -10,7 +12,10 @@ export default function Pagination({pageNumbers, loading, paginate, next, prev, 
                 paginate(number);
               }}
             >
-              {number}
+              {/* <NavLink t> */}
+                {number}
+              {/* </NavLink> */}
+              
             </li>
           );
         }) : <p>loading...</p>}
