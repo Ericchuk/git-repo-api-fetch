@@ -1,7 +1,13 @@
 import { Helmet } from "react-helmet";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export default function ErrorFallback({ error }) {
+export default function ErrorFallback({ error}) {
+    const nav = useNavigate()
+    const handleClick = e => {
+        e.preventDefault()
+        nav('/')
+        window.location.reload(false);
+    }
     return (
       <div role="alert">
         <Helmet>
@@ -11,7 +17,8 @@ export default function ErrorFallback({ error }) {
 
         <p>Something went wrong:</p>
         <pre>{error.message}</pre>
-        <Link to='/'>Home</Link>
+
+        <button onClick={handleClick} >Try Again </button>
       </div>
     );
   }

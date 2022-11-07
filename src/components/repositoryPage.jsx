@@ -5,6 +5,9 @@ import Logo from './images/github.png';
 import css from './images/css-3.png';
 import js from './images/js.png';
 import error from './images/error.png';
+import Loading from './loading';
+import ErrorCall from './errorCall'
+
 
 
 export default function Repos({
@@ -16,12 +19,13 @@ export default function Repos({
   pageNumbers,
   currentPage,
   disabled,
-  disabled2
+  disabled2,
+  setRepos
 }) {
   const reps = currentUsers.map((item) => {
     return (
       <>
-      <Link to={`/${item.id}`} key={item.id} className="listItem">
+      <Link to={`/${item.name}`} key={item.id} className="listItem">
         {/* <p key={item.id} > */}
           {/* <Link to={`/${item.id}`} > */}
             <p>{item.full_name}</p>
@@ -37,6 +41,11 @@ export default function Repos({
       </>
     );
   });
+
+  function boundary(){
+    setRepos("efede")
+  }
+
   return (
     <section>
       <Helmet>
@@ -47,10 +56,10 @@ export default function Repos({
           <img src={Logo} alt="Logo" />
           <h1>Git-Repo</h1>
         </Link>
-        <p><img src={error} alt="error" /><b>call Boundary</b></p>
+        <ErrorCall boundary={boundary} error={error} setRepos={setRepos} />
       </header>
       <main>
-        {loading ? reps : <p>Loading...</p>}
+        {loading ? reps : <Loading /> }
         
         <Pagination
         prev={prev}

@@ -25,7 +25,6 @@ export default function LandingPage() {
         setLoading(true);
         const response = await fetch(
           "https://api.github.com/users/ericchuk/repos"
-          // 'https://jsonplaceholder.typicode.com/users'
         );
         const data = await response.json();
         setRepos(data);
@@ -80,10 +79,10 @@ export default function LandingPage() {
           setDisabled2(true)
       }
   }
-
+ 
 
   return (
-    <ErrorBoundary FallbackComponent={ErrorBoundaryFallback}>
+    <ErrorBoundary setRepos={setRepos} FallbackComponent={ErrorBoundaryFallback}>
       <article>
         <Helmet>
           <title>Git Repo</title>
@@ -92,12 +91,11 @@ export default function LandingPage() {
         
         {show ? <Home /> : ''}
       {!show ?  <Routes>      
-          <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} />} />
+          <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} setRepos={setRepos} />} />
           <Route path="/:repoId" element={<RepoItems setLoading={setLoading} setRepos={setRepos} handleError={handleError} />} />
           <Route path="*" element={<Noroute />} />
         </Routes> : ""}
       </article>
-      {/* <SideBar /> */}
     </ErrorBoundary>
   );
 }

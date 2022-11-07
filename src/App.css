@@ -194,6 +194,7 @@ main .listItem {
   flex-direction: column;
   border-radius: 5px;
   text-decoration: none;
+  list-style-type: none;
 }
 main .listItem a {
   width: 100%;
@@ -239,6 +240,10 @@ main ul button:hover {
   opacity: 0.7;
 }
 
+.reposItem a {
+  margin: 5px 0;
+}
+
 .errorPage {
   display: flex;
   justify-content: center;
@@ -271,6 +276,21 @@ main ul button:hover {
   opacity: 0.9;
 }
 
+.errorCall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 4px;
+}
+.errorCall img {
+  margin: 0 10px 0 0;
+}
+
 div[role=alert] {
   width: 100%;
   height: 100vh;
@@ -300,12 +320,42 @@ div[role=alert] a:hover {
   color: white;
 }
 
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading span {
+  border-bottom: 5px solid red;
+  height: 100px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 20px;
+  -webkit-animation: opac 2s 1s infinite;
+          animation: opac 2s 1s infinite;
+}
+.loading span:nth-child(2) {
+  -webkit-animation: opac 2s 2s infinite;
+          animation: opac 2s 2s infinite;
+}
+.loading span:last-child {
+  -webkit-animation: opac 2s 3s infinite;
+          animation: opac 2s 3s infinite;
+}
+
 @media screen and (min-width: 500px) {
   main {
     padding: 20px 40px;
   }
 }
 @media screen and (min-width: 785px) {
+  header {
+    padding: 20px 30px;
+  }
   main {
     display: flex;
     justify-content: center;
@@ -319,5 +369,27 @@ div[role=alert] a:hover {
   }
   main ul {
     margin: 20px 0;
+  }
+}
+@-webkit-keyframes opac {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opac {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=App.css.map */
