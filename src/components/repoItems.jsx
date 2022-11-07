@@ -29,7 +29,7 @@ export default function RepoItems({ handleError }) {
   return (
     <section>
       <Helmet>
-        <title>Item.full_name</title>
+        <title>{user.full_name}</title>
         <meta
           name="description"
           content="Repository content, various files containing different language and readMe file."
