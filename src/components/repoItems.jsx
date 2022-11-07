@@ -42,7 +42,7 @@ export default function RepoItems({ handleError }) {
               <p><b>Name: </b> {user.full_name}</p>
               <a href={user.forks_url}><b>Forked-Url:</b>  {user.forks_url}</a>
               <br />
-              <a href={user.html_url}><b>Html-Url</b>  {user.html_url}</a>
+              <a href={user.html_url}><b>Html-Url:</b>  {user.html_url}</a>
               <div>
                 <p>
                   <b>Created:</b> {user.created_at}

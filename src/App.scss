@@ -249,8 +249,17 @@ main {
 }
 
 .reposItem{
-    a{
+    padding:0 20px;
+
+    p{
         margin:5px 0;
+        background:var(--box-color);
+        padding:5px 10px;
+        border-radius:6px;
+    }
+    a{
+        line-height:1.8rem;
+        padding:5px 10px;
     }
 }
 
