@@ -16,3 +16,7 @@ Walk through:- Going from bottom to top,
    <li>Create a component that contains list of repositories, this data would be gotten through the use of useEffect hook, which enable it mount everytime it reload. Assign the fetched data to a state value called repos</li>
    <li>Create another component that get the data for each repository clicked on, I made use of <b>useParams</b> to pass data forward and use it to get the name of each data clicked on.</li>
    <li>
+
+
+<b>GOALS</b>
+<p>Make it like git hub </p>

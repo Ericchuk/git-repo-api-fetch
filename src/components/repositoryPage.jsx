@@ -1,12 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
 import { Helmet } from 'react-helmet'
 import Pagination from "./pagination";
-import Logo from './images/github.png';
 import css from './images/css-3.png';
 import js from './images/js.png';
-import error from './images/error.png';
 import Loading from './loading';
-import ErrorCall from './errorCall'
 
 
 
@@ -42,22 +39,14 @@ export default function Repos({
     );
   });
 
-  function boundary(){
-    setRepos("efede")
-  }
+
 
   return (
     <section>
       <Helmet>
           <meta name="description" content="Get info for my repository" />
         </Helmet>
-      <header>
-        <Link to="/">
-          <img src={Logo} alt="Logo" />
-          <h1>Git-Repo</h1>
-        </Link>
-        <ErrorCall boundary={boundary} error={error} setRepos={setRepos} />
-      </header>
+      
       <main>
         {loading ? reps : <Loading /> }
         

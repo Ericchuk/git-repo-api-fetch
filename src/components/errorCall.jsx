@@ -1,5 +1,9 @@
 export default function ErrorCall({error, boundary}){
     return(
-        <button onClick={boundary} className="errorCall"><img src={error} alt="error" /><b>call Boundary</b></button>
+        <div className="callError">
+            <button onClick={boundary} className="errorCall"><img src={error} alt="error" /></button>
+            <p>Call Boundary</p>
+        </div>
+        
     )
 }

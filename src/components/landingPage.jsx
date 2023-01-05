@@ -7,10 +7,13 @@ import RepoItems from "./repoItems";
 import { Routes, Route } from "react-router-dom";
 import { ErrorBoundary, useErrorHandler } from "react-error-boundary";
 import Home from './homePage';
+import Header from './header';
+import OverviewPage from "./overviewPage";
 
 
 export default function LandingPage() {
   const [repos, setRepos] = useState([]);
+  const [overviewData, setOverviewData] = useState([]);
   const [loading, setLoading] = useState(false);
   const handleError = useErrorHandler();
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,6 +37,26 @@ export default function LandingPage() {
       }
     }
     getData();
+  }, []);
+
+  
+  // fetch overview page data 
+  useEffect(() => {
+    async function getOverviewData() {
+      try {
+        setLoading(true);
+        const response = await fetch(
+          "https://api.github.com/users/ericchuk"
+        );
+        const ovData = await response.json();
+        setOverviewData(ovData);
+        
+      } catch (err) {
+        setLoading(false);
+        handleError(err)
+      }
+    }
+    getOverviewData();
   }, []);
 
   useEffect(() => {
@@ -90,8 +113,11 @@ export default function LandingPage() {
         </Helmet>
         
         {show ? <Home /> : ''}
+        <Header setRepos={setRepos} />
+        {/* <OverviewPage overviewData={overviewData} /> */}
       {!show ?  <Routes>      
-          <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} setRepos={setRepos} />} />
+          <Route path='/' element={<OverviewPage />} />
+          {/* <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} setRepos={setRepos} />} /> */}
           <Route path="/:repoId" element={<RepoItems setLoading={setLoading} setRepos={setRepos} handleError={handleError} />} />
           <Route path="*" element={<Noroute />} />
         </Routes> : ""}
