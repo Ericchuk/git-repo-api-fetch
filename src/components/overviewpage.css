@@ -77,11 +77,12 @@
 }
 .overview .second > ul li {
   padding: 10px 15px;
-  margin: 5px 0;
+  margin: 5px 10px 5px 0;
   color: white;
   font-weight: bold;
   letter-spacing: 0.25rem;
   border-radius: 3px;
+  list-style: none;
 }
 .overview .second > ul li img {
   margin: 0 5px 0 0;
@@ -133,6 +134,9 @@
   margin: 10px 0;
   list-style: none;
 }
+.overview .second article .tools li img {
+  width: 40%;
+}
 .overview .second article .languages {
   background-color: rgba(0, 0, 0, 0.994);
   color: white;
@@ -160,16 +164,16 @@
   height: 100%;
 }
 .overview .second article .languages .bar .darkpurple {
-  background-color: purple;
+  background-color: rgb(128, 0, 128);
   width: 39.12%;
   border-radius: 10px 0 0 10px;
 }
 .overview .second article .languages .bar .yellow {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
   width: 29.74%;
 }
 .overview .second article .languages .bar .lightred {
-  background-color: red;
+  background-color: rgb(255, 0, 0);
   width: 24.8%;
 }
 .overview .second article .languages .bar .lightpurple {
@@ -191,4 +195,16 @@
 .overview .second article .languages .langs li small {
   font-size: 14px;
   margin: 0 0 0 10px;
+}
+.overview .second article .languages .langs li:first-child {
+  list-style-image: linear-gradient(0deg, rgb(128, 0, 128), rgb(128, 0, 128));
+}
+.overview .second article .languages .langs li:nth-child(2) {
+  list-style-image: linear-gradient(0deg, rgb(255, 255, 0), rgb(255, 255, 0));
+}
+.overview .second article .languages .langs li:nth-child(3) {
+  list-style-image: linear-gradient(0deg, rgb(255, 0, 0), rgb(255, 0, 0));
+}
+.overview .second article .languages .langs li:last-child {
+  list-style-image: linear-gradient(0deg, rgb(192, 0, 210), rgb(192, 0, 210));
 }/*# sourceMappingURL=overviewpage.css.map */

@@ -97,11 +97,13 @@
             li{
                 // outline:2px solid red;
                 padding: 10px 15px;
-                margin:5px 0;
+                margin:5px 10px 5px 0;
                 color:white;
                 font-weight: bold;
                 letter-spacing: .25rem;
                 border-radius:3px;
+                list-style: none;
+
                 img{
                     margin:0 5px 0 0;
                 }
@@ -160,6 +162,10 @@
                     width:90px;
                     margin:10px 0;
                     list-style: none;
+                    
+                    img{
+                        width:40%;
+                    }
                 }
             }
 
@@ -176,30 +182,6 @@
                     font-size: 20px;
                 }
 
-                // progress[value]{
-                //     width:100%;
-                //     margin:10px 0;
-                //     appearance:none;
-                // }
-
-                // progress[value]::-webkit-progress-bar {
-                //     background-color: #eee;
-                //     border-radius: 50px;
-                //     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-                // }
-
-                // progress[value]::-webkit-progress-value {
-                //     // background-image:
-                //         //  -webkit-linear-gradient(-45deg, 
-                //         //                          transparent 33%, rgba(0, 0, 0, .1) 33%, 
-                //         //                          rgba(0,0, 0, .1) 66%, transparent 66%),
-                //         //  -webkit-linear-gradient(top, 
-                //         //                          rgba(255, 255, 255, .25), 
-                //         //                          rgba(0, 0, 0, .25)),
-                //         //  -webkit-linear-gradient(40deg, rgb(147, 0, 127), rgb(236, 255, 68), rgb(255, 0, 0), rgb(135, 1, 135));
-                //       border-radius: 2px; 
-                //       background-size: 35px 20px, 100% 100%, 100% 100%;
-                //   }
 
                 .bar{
                     // border:2px solid red;
@@ -219,18 +201,18 @@
                     }
                     .darkpurple{
                         // border:2px solid green;
-                        background-color:purple;
+                        background-color:rgb(128, 0, 128);
                         width:39.12%;
                         border-radius:10px 0 0 10px;
                     }
                     .yellow{
                         // border:2px solid green;
-                        background-color:yellow;
+                        background-color:rgb(255, 255, 0);
                         width:29.74%;
                     }
                     .lightred{
                         // border:2px solid green;
-                        background-color:red;
+                        background-color:rgb(255, 0, 0);
                         width:24.80%;
                     }
                     .lightpurple{
@@ -256,6 +238,19 @@
                             font-size:14px;
                             margin:0 0 0 10px;
                         }
+                    }
+
+                    li:first-child{
+                        list-style-image: linear-gradient(0deg, rgb(128, 0, 128), rgb(128, 0, 128));
+                    }
+                    li:nth-child(2){
+                        list-style-image: linear-gradient(0deg, rgb(255, 255, 0), rgb(255, 255, 0));
+                    }
+                    li:nth-child(3){
+                        list-style-image: linear-gradient(0deg, rgb(255, 0, 0), rgb(255, 0, 0));
+                    }
+                    li:last-child{
+                        list-style-image: linear-gradient(0deg, rgb(192, 0, 210), rgb(192, 0, 210));
                     }
                 }
             }
