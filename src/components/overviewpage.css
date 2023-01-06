@@ -1,0 +1,124 @@
+:root {
+  --sectionBg: rgb(209, 209, 209);
+}
+
+.overview {
+  position: absolute;
+  top: 70px;
+  color: black;
+}
+.overview .first {
+  padding: 10px 10px;
+  background-color: var(--sectionBg);
+  margin: 0 0 15px;
+}
+.overview .first aside {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0 15px;
+}
+.overview .first img {
+  width: 20%;
+  border-radius: 100%;
+  margin: 0 20px 0 0px;
+}
+.overview .first aside h3 {
+  font-size: 22px;
+  line-height: 2rem;
+}
+.overview .first aside h4 {
+  font-size: 15px;
+  color: rgb(39, 35, 35);
+}
+.overview .first section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.overview .first section > p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0 0 10px;
+}
+.overview .first section > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.overview .second {
+  background-color: var(--sectionBg);
+  padding: 20px 0px;
+}
+.overview .second aside aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0 10px;
+}
+.overview .second aside aside p {
+  padding: 0 10px;
+}
+.overview .second aside div {
+  margin: 0 0 0 10px;
+}
+.overview .second aside div h2 {
+  margin: 0 0 0 5px;
+  padding: 10px 0;
+  font-size: 30px;
+}
+.overview .second > ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.overview .second > ul li {
+  padding: 10px 15px;
+  margin: 5px 0;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  border-radius: 3px;
+}
+.overview .second > ul li img {
+  margin: 0 5px 0 0;
+}
+.overview .second > ul .purple {
+  background: purple;
+}
+.overview .second > ul .black {
+  background: black;
+}
+.overview .second > ul .darkblue {
+  background: darkblue;
+}
+.overview .second > ul .blue {
+  background: rgb(50, 50, 170);
+}
+.overview .second article {
+  padding: 5px 10px;
+}
+.overview .second article > p {
+  font-size: 17px;
+  line-height: 1.4rem;
+  color: rgb(0, 0, 0);
+  margin: 0 0 10px;
+}
+.overview .second article > b {
+  font-size: 17px;
+  padding: 8px 0 10px;
+  display: inline-block;
+}
+.overview .second article ol {
+  list-style-type: disc;
+  padding: 0 0 0 10px;
+}
+.overview .second article ol li {
+  line-height: 2rem;
+  list-style: disc;
+  margin: 5px 0 5px 20px;
+  font-size: 16px;
+}/*# sourceMappingURL=overviewpage.css.map */

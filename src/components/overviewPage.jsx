@@ -1,3 +1,13 @@
+import html from './images/html5-original.svg';
+import css from './images/css3-original.svg';
+import scss from './images/sass-original.svg';
+import tailwind from './images/tailwindcss-original-wordmark.svg';
+import javascript from './images/javascript-original.svg';
+import firebase from './images/firebase-plain.svg';
+import figma from './images/figma-original.svg';
+import git from './images/git-original-wordmark.svg';
+import './overviewpage.css'
+
 export default function OverviewPage({overviewData}){
     // map through an array 
     // const overview = overviewData.map((item) => {
@@ -12,29 +22,27 @@ export default function OverviewPage({overviewData}){
     //     )
     // })
     return(
-        <section>
+        <section className='overview'>
             {/* THis is the overview section  */}
             {/* {console.log(overviewData)} */}
             <section>
-                <section>
+                <section className='first'>
+                    
                     {/* this is the introductory part  */}
-                    <img alt="myImage" />
+                    
 
                     <aside>
-                        <h3>Chukwuanieze Eric</h3>
-                        <h4>Ericchuk</h4>
+                        <img src='https://avatars.githubusercontent.com/u/47712998?v=4' alt="myImage" />
+                        <div>
+                           <h3>Chukwuanieze Eric</h3>
+                            <h4>Ericchuk</h4> 
+                        </div>
+                        
                     </aside>
-                </section>
-
-
-                <section>
-                    <div>
-                        set status
-                    </div>
+                    
+                    <section>
                     <p>A software developer, code in javascript, uses react framework</p>
-                </section>
-                
-                <section>
+                    <section>
                     <div>
                         <img alt="followers" />
                         <b>6</b>
@@ -46,28 +54,35 @@ export default function OverviewPage({overviewData}){
                         <p>following</p>
                     </div>
                 </section>
+                </section>
+                </section>
+
+
+                
+                
+                
 
                 {/* overview dashboard */}
 
-                <section>
-                    <header>
+                <section className='second'>
+                    <aside>
                         <aside>
-                            <p>Ericchuk / README.md</p>
+                            <p>Ericchuk /<b>README</b>.md</p>
                             <img alt="pen" />
                         </aside>
                         <hr />
 
                         <div>
-                            <h2>Hello there; welcome</h2>
+                            <h2>Hello there; welcome 👋🏾</h2>
                             <hr />
                         </div>
-                    </header>
+                    </aside>
 
                     <ul>
-                        <a><li><img alt="eng" /> ENGINEERING</li></a>
-                        <a><li><img alt="personalweb" />CHUKWUANIEZEERIC.COM</li></a>
-                        <a><li><img alt="linkedIn" />IAMCHUKWUANIEZEERIC</li></a>
-                        <a><li><img alt="twitter" />CHUKSBRAVEN</li></a>
+                        <a><li className='purple'><img alt="eng" /> ENGINEERING</li></a>
+                        <a><li className='black'><img alt="pe" />CHUKWUANIEZEERIC.COM</li></a>
+                        <a><li className='darkblue'><img alt="li" />IAMCHUKWUANIEZEERIC</li></a>
+                        <a><li className='blue'><img alt="tw" />CHUKSBRAVEN</li></a>
                     </ul>
                     <article>
                         {/* my description  */}
@@ -77,22 +92,42 @@ export default function OverviewPage({overviewData}){
 
                         <b>Here's a quick summary about me:</b>
                         
-                        <ul>
+                        <ol>
                             <li>😊 Pronouns: He/him</li>
                             <li>💡 Fun fact: I'm currently studying at Altschool Africa <a>School of Software Engineering </a>Class of 2022</li>
                             <li>🌱 I'm currently learning Vuejs</li>
                             <li>😊 I’m looking for help with open source projects, hackathons, internships, and entry-level opportunities.</li>
                             <li>💼 Job interests: Software Engineer, Front Engineer, or UI Engineer (Intern or Junior level).</li>
-                            <li>📫 You can view my resume and contact me by emailing mailtochukwuaniezeeric@gmail.com.</li>
-                        </ul>
+                            <li>📫 You can view my resume and contact me by emailing <a href="mailto:chukwuaniezeeric@gmail.com"> mailtochukwuaniezeeric@gmail.com</a></li>
+                        </ol>
 
                         <hr />
 
                         <b>🛠️ Languages and Tools :</b>
                         <ul>
-                           HTML  CSS3  JavaScript  SCSS  SASS  Tailwind  Firebase  Figma  Git 
+                            <li><img src={html} alt=""/> HTML</li>
+                            <li><img src={css} alt=""/> CSS3</li>
+                            <li><img src={scss} alt=""/> SASS/SCSS</li>
+                            <li><img src={tailwind} alt=""/> Tailwind</li>
+                            <li><img src={javascript} alt=""/> JavaScript</li>
+                            <li><img src={firebase} alt=""/> Firebase</li>
+                            <li><img src={figma} alt=""/> Figma</li>
+                            <li><img src={git} alt=""/> Git</li>
                         </ul>
+
+                        <section>
+                            <b>Most Used Language</b>
+                            <progress value="100" max="100"></progress>
+
+                            <div>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                                <li>JavaScript</li>
+                                <li>SCSS</li>
+                            </div>
+                        </section>
                     </article>
+
                 </section>
             </section>
         </section>
