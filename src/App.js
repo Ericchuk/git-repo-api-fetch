@@ -1,4 +1,5 @@
 import './App.css';
+import './Appmedia1000px.css';
 import LandingPage from "./components/landingPage";
 import { BrowserRouter } from 'react-router-dom'
 

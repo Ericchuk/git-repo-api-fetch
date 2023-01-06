@@ -197,8 +197,6 @@ header .nav {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  transform: translateX(0px);
-  transition: transform 0.3s ease-in-out;
   overflow-y: hidden;
   -webkit-animation: slideIn 0.3s linear;
           animation: slideIn 0.3s linear;

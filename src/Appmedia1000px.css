@@ -1,0 +1,19 @@
+@media screen and (min-width: 1000px) {
+  header {
+    border: 2px solid red;
+  }
+  header .open,
+header .close {
+    display: none;
+  }
+  header .unav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0);
+  }
+  header .unav li {
+    list-style: none;
+    margin: 0 20px;
+  }
+}/*# sourceMappingURL=Appmedia1000px.css.map */

@@ -30,13 +30,14 @@ export default function Header({setRepos}){
           <img src={Logo} alt="Logo" />
           <h1>Git-Repo</h1>
         </Link>
-        <ErrorCall boundary={boundary} error={error} setRepos={setRepos} />
-
         <nav className={openMenu ? "unav" : "nav"}>
           <a><li>Overview </li></a>
           <a><li>Repository <b>20</b></li></a>
           <a><li>Stars <b>10</b></li></a>
         </nav>
+        <ErrorCall boundary={boundary} error={error} setRepos={setRepos} />
+
+        
       </header>
     )
 }
