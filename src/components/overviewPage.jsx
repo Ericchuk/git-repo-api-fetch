@@ -104,26 +104,31 @@ export default function OverviewPage({overviewData}){
                         <hr />
 
                         <b>🛠️ Languages and Tools :</b>
-                        <ul>
-                            <li><img src={html} alt=""/> HTML</li>
-                            <li><img src={css} alt=""/> CSS3</li>
-                            <li><img src={scss} alt=""/> SASS/SCSS</li>
-                            <li><img src={tailwind} alt=""/> Tailwind</li>
-                            <li><img src={javascript} alt=""/> JavaScript</li>
-                            <li><img src={firebase} alt=""/> Firebase</li>
-                            <li><img src={figma} alt=""/> Figma</li>
-                            <li><img src={git} alt=""/> Git</li>
+                        <ul className='tools'>
+                            <li><img src={html} alt=""/> </li>
+                            <li><img src={css} alt=""/> </li>
+                            <li><img src={scss} alt=""/></li>
+                            <li><img src={tailwind} alt=""/> </li>
+                            <li><img src={javascript} alt=""/> </li>
+                            <li><img src={firebase} alt=""/> </li>
+                            <li><img src={figma} alt=""/></li>
+                            <li><img src={git} alt=""/></li>
                         </ul>
 
-                        <section>
+                        <section className='languages'>
                             <b>Most Used Language</b>
-                            <progress value="100" max="100"></progress>
-
-                            <div>
-                                <li>CSS</li>
-                                <li>HTML</li>
-                                <li>JavaScript</li>
-                                <li>SCSS</li>
+                            {/* <progress value="100" max="100"></progress> */}
+                            <div className="bar">
+                                <div className="darkpurple"></div>
+                                <div className="yellow"></div>
+                                <div className="lightred"></div>
+                                <div className="lightpurple"></div>
+                            </div>
+                            <div className="langs">
+                                <li>CSS  <small>39.12%</small></li>
+                                <li>HTML <small>24.12%</small></li>
+                                <li>JavaScript <small>29.74%</small></li>
+                                <li>SCSS <small>6.34%</small></li>
                             </div>
                         </section>
                     </article>
