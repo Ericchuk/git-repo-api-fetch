@@ -31,9 +31,9 @@ export default function Header({setRepos}){
           <h1>Git-Repo</h1>
         </Link>
         <nav className={openMenu ? "unav" : "nav"}>
-          <a><li>Overview </li></a>
-          <a><li>Repository <b>20</b></li></a>
-          <a><li>Stars <b>10</b></li></a>
+          <Link to="/"><li>Overview </li></Link>
+          <Link to=""><li>Repository <b>20</b></li></Link>
+          <Link to=""><li>Stars <b>10</b></li></Link>
         </nav>
         <ErrorCall boundary={boundary} error={error} setRepos={setRepos} />
 

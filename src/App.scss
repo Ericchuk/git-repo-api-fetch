@@ -169,6 +169,7 @@ header {
         color:white;
         z-index:4;
 
+
         img{
             width: 40px;
             padding: 5px;
@@ -181,6 +182,13 @@ header {
     .unav{
         transform: translateX(-1000px);
         display:none;
+
+        a{
+            cursor: pointer;
+            margin:0 10px;
+            // border:2px solid red;
+            padding:5px;
+        }
     }
 
     .nav{

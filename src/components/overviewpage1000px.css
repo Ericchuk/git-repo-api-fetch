@@ -1,0 +1,51 @@
+@media screen and (min-width: 1000px) {
+  .overview > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .overview > section .first {
+    padding: 30px 20px;
+    height: 100vh;
+    background-color: white;
+  }
+  .overview > section .first aside {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .overview > section .first aside img {
+    margin: 0 0 20px;
+    width: 90%;
+    border: 2px solid rgb(187, 187, 187);
+  }
+  .overview > section .first aside h3 {
+    font-size: 30px;
+  }
+  .overview > section .first aside h4 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+  .overview > section .first > section {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .overview > section .first > section > section {
+    display: flex;
+    width: 100%;
+  }
+  .overview > section .first > section > section > div {
+    width: 45%;
+  }
+  .overview > section .first > section > section > div b {
+    margin: 0 5px;
+  }
+  .overview > section .second {
+    margin: 10px 20px 10px 0;
+    border-radius: 10px;
+    padding: 20px 10px;
+  }
+  .overview > section .second article .tools li img {
+    width: 70%;
+  }
+}/*# sourceMappingURL=overviewpage1000px.css.map */

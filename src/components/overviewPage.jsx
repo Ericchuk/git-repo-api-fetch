@@ -7,20 +7,10 @@ import firebase from './images/firebase-plain.svg';
 import figma from './images/figma-original.svg';
 import git from './images/git-original-wordmark.svg';
 import './overviewpage.css'
+import './overviewpage1000px.css'
 
 export default function OverviewPage({overviewData}){
-    // map through an array 
-    // const overview = overviewData.map((item) => {
-    //     return(
-    //         <>
-    //             <img src={item.avater_url} alt="myImage" />
-    //             <aside>
-    //                 <h3>{item.name}</h3>
-    //                 <h4>{item.login}</h4>
-    //             </aside>
-    //         </>
-    //     )
-    // })
+
     return(
         <section className='overview'>
             {/* THis is the overview section  */}
@@ -79,10 +69,10 @@ export default function OverviewPage({overviewData}){
                     </aside>
 
                     <ul>
-                        <a><li className='purple'><img alt="eng" /> ENGINEERING</li></a>
-                        <a><li className='black'><img alt="pe" />CHUKWUANIEZEERIC.COM</li></a>
-                        <a><li className='darkblue'><img alt="li" />IAMCHUKWUANIEZEERIC</li></a>
-                        <a><li className='blue'><img alt="tw" />CHUKSBRAVEN</li></a>
+                        <a href=''><li className='purple'><img alt="eng" /> ENGINEERING</li></a>
+                        <a href=""><li className='black'><img alt="pe" />CHUKWUANIEZEERIC.COM</li></a>
+                        <a href=""><li className='darkblue'><img alt="li" />IAMCHUKWUANIEZEERIC</li></a>
+                        <a href=""><li className='blue'><img alt="tw" />CHUKSBRAVEN</li></a>
                     </ul>
                     <article>
                         {/* my description  */}

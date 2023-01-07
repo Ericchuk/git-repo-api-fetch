@@ -18,7 +18,7 @@
   align-items: center;
   padding: 5px 0 15px;
 }
-.overview .first img {
+.overview .first aside img {
   width: 20%;
   border-radius: 100%;
   margin: 0 20px 0 0px;
@@ -31,18 +31,18 @@
   font-size: 15px;
   color: rgb(39, 35, 35);
 }
-.overview .first section {
+.overview .first > section > p {
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0 0 10px;
+}
+.overview .first > section section {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
 }
-.overview .first section > p {
-  font-size: 16px;
-  line-height: 1.5rem;
-  margin: 0 0 10px;
-}
-.overview .first section > div {
+.overview .first > section section > div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -83,6 +83,7 @@
   letter-spacing: 0.25rem;
   border-radius: 3px;
   list-style: none;
+  cursor: pointer;
 }
 .overview .second > ul li img {
   margin: 0 5px 0 0;
