@@ -9,6 +9,7 @@ ul li {
   margin: 0 10px;
   border: 2px solid lightgrey;
   padding: 5px;
+  cursor: pointer;
 }
 ul button {
   padding: 8px 10px;

@@ -1,3 +1,5 @@
+import human from './images/human.png';
+
 export default function Profile(){
     return(
         <section className='first'>
@@ -18,12 +20,12 @@ export default function Profile(){
                     <p>A software developer, code in javascript, uses react framework</p>
                     <section>
                     <div>
-                        <img alt="followers" />
+                        <img src={human} alt="followers" />
                         <b>6</b>
                         <p>followers</p>
                     </div>
                     <div>
-                        <img alt="following" />
+                        <img src={human} alt="following" />
                         <b>14</b>
                         <p>following</p>
                     </div>
