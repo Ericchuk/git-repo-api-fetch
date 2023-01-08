@@ -378,22 +378,22 @@ div[role="alert"]{
     header{
         padding:20px 30px;
     }
-    main{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-wrap:wrap;
-        padding:20px;
+    // main{
+    //     // display:flex;
+    //     // justify-content:center;
+    //     // align-items:center;
+    //     // flex-wrap:wrap;
+    //     // padding:20px;
 
-        .listItem{
-            width:45%;
-            margin:10px;
-        }
+    //     .listItem{
+    //         width:45%;
+    //         margin:10px;
+    //     }
 
-        ul{
-            margin:20px 0;
-        }
-    }
+    //     ul{
+    //         margin:20px 0;
+    //     }
+    // }
 }
 
 @keyframes opac{

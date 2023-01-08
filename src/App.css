@@ -373,20 +373,6 @@ div[role=alert] a:hover {
   header {
     padding: 20px 30px;
   }
-  main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  main .listItem {
-    width: 45%;
-    margin: 10px;
-  }
-  main ul {
-    margin: 20px 0;
-  }
 }
 @-webkit-keyframes opac {
   0% {

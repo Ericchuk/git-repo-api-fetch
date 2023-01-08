@@ -1,22 +1,24 @@
 main{
     position: absolute;
     top:70px;
+    width:100%;
 
     .repsOverview{
 
         .first{
             padding:10px 10px;
             aside {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 5px 0 15px;
                 img {
                     width: 20%;
                     border-radius: 100%;
                     margin: 0 20px 0 0px;
                 }
     
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding: 5px 0 15px;
+                
     
                 h3 {
                     font-size: 22px;
@@ -66,12 +68,15 @@ main{
                 justify-content: space-between;
                 align-items: center;
                 padding:20px 10px;
+                width:100%;
                 a{
                     line-height: 1.8rem;
                     text-decoration: none;
                     font-size: 18px;
                     font-weight: bolder;
                     margin:0 15px 15px 0;
+                    width:100%;
+                    // border:2px solid red;
                 }
                 .privacy{
                     border:1px solid lightgray;
@@ -105,6 +110,40 @@ main{
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px){
+    main{
+        // border:2px solid red;
+        flex-direction:column;
+
+        .repsOverview{
+            // border:2px solid green;
+            display:flex;
+            justify-content:flex-start;
+
+            .first{
+                // border:2px solid black;
+                width:60%;
+                margin:0 10px 0 0;
+
+                aside{
+                    flex-direction:column;
+                    justify-content:flex-start;
+                    align-items:flex-start;
+
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+
+            .afterProfile{
+                width:160%;
+                // border:2px solid yellow;
             }
         }
     }

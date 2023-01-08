@@ -14,11 +14,11 @@ export default function Header({setRepos}){
     }
 
     function openNav(){
-      setOpenMenu(!openMenu)
+      setOpenMenu(false)
     }
 
     function closeNav(){
-      setOpenMenu(!openMenu)
+      setOpenMenu(true)
     }
 
 
