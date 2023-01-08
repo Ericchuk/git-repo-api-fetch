@@ -1,10 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Pagination from "./pagination";
-import css from "./images/css-3.png";
-import js from "./images/js.png";
 import Loading from "./loading";
 import Profile from "./profile";
+import star from './images/star.png';
+import shinyStar from './images/star (1).png';
 import "./repositorys.css";
 
 export default function Repos({
@@ -22,31 +22,27 @@ export default function Repos({
   const reps = currentUsers.map((item) => {
     return (
       <>
-      
-        <Link to={`/${item.name}`} key={item.id} className="listItem">
           <hr />
-          {/* <p key={item.id} > */}
-          {/* <Link to={`/${item.id}`} > */}
-          <p>{item.full_name}</p>
-          {/* </Link> */}
-          <span>
-            <b>
-              Language:{" "}
-              {item.language === "CSS" ? (
-                <img src={css} alt={item.language} />
-              ) : item.language === "JavaScript" ? (
-                <img src={js} alt={item.language} />
-              ) : item.language === null ? (
-                "Oops"
-              ) : (
-                ""
-              )}
-            </b>
-            <b>Watchers: {item.watchers === 0 ? "1" : 1 + item.watchers}</b>
-          </span>
+        <article key={item.id} className="listItem">
+          <aside>
+            <p><Link to={`/${item.name}`}>{item.full_name}</Link> <small className="privacy">{item.private === false ? "public" : "private"}</small></p>
+            
 
-          {/* </p> */}
-        </Link>
+            <p>
+              <b>
+                {item.language === "CSS"
+                  ? "CSS"
+                  : item.language === "JavaScript"
+                  ? "JavaScript"
+                  : item.language === null
+                  ? "Oops"
+                  : ""}
+              </b>
+              <small>updated on {item.updated_at}</small>
+            </p>
+          </aside>
+          <button className="gazers">{item.stargazers_count === 0 ? <small><img src={shinyStar} alt='shinyStar'/>Starred</small> : <small><img src={star}  alt="star"/>Star</small>}</button>
+        </article>
       </>
     );
   });
@@ -60,10 +56,12 @@ export default function Repos({
       <main>
         <section className="repsOverview">
           <Profile />
-          <section className="afterProfile">{loading ? <aside className="reps">{reps}</aside>  : <Loading />}</section>
+          <section className="afterProfile">
+            {loading ? <aside className="reps">{reps}</aside> : <Loading />}
+          </section>
         </section>
 
-        {/* <Pagination
+        <Pagination
           prev={prev}
           next={next}
           paginate={paginate}
@@ -72,7 +70,7 @@ export default function Repos({
           loading={loading}
           disabled={disabled}
           disabled2={disabled2}
-        /> */}
+        />
         <Outlet />
       </main>
     </section>

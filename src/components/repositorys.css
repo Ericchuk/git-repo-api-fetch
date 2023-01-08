@@ -41,6 +41,49 @@ main .repsOverview .first > section section > div {
   align-items: center;
   margin: 5px 5px;
 }
-main .repsOverview .afterProfile {
-  border: 2px solid red;
+main .repsOverview .afterProfile hr {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .repsOverview .afterProfile article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+main .repsOverview .afterProfile article a {
+  line-height: 1.8rem;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 0 15px 15px 0;
+}
+main .repsOverview .afterProfile article .privacy {
+  border: 1px solid lightgray;
+  width: auto;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+main .repsOverview .afterProfile article p b {
+  font-size: 14px;
+  display: inline-block;
+  margin: 10px 5px 10px 0;
+}
+main .repsOverview .afterProfile article button {
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.141);
+}
+main .repsOverview .afterProfile article button small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .repsOverview .afterProfile article button small img {
+  width: 18px;
+  margin: 0 5px 0 0;
 }/*# sourceMappingURL=repositorys.css.map */

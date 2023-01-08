@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import './pagination.css'
 
 export default function Pagination({pageNumbers, loading, paginate, next, prev, disabled, disabled2}){
     return (

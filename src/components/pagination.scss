@@ -1,0 +1,19 @@
+ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    list-style-type:none;
+    padding:20px 0;
+
+    li{
+        margin:0 10px;
+        border:2px solid lightgrey;
+        padding:5px;
+    }
+    button{
+        padding:8px 10px;
+        background-color:black;
+        color:white;
+        border-radius:5px;
+    }
+}

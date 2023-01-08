@@ -55,7 +55,57 @@ main{
         }
 
         .afterProfile{
-            border: 2px solid red;
+            hr{
+                width:90%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            article{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:20px 10px;
+                a{
+                    line-height: 1.8rem;
+                    text-decoration: none;
+                    font-size: 18px;
+                    font-weight: bolder;
+                    margin:0 15px 15px 0;
+                }
+                .privacy{
+                    border:1px solid lightgray;
+                    width: auto;
+                    padding:3px 8px;
+                    border-radius: 20px;
+                }
+
+                p{
+                    b{
+                        font-size:14px;
+                        display:inline-block;
+                        margin:10px 5px 10px 0;
+                    }
+                }
+
+                button{
+                    padding:5px;
+                    border-radius:3px;
+                    border:none;
+                    outline:none;
+                    box-shadow:2px 4px rgba(0, 0, 0, 0.141);
+                    small{
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+
+                        img{
+                            width:18px;
+                            margin:0 5px 0 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
