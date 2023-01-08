@@ -114,10 +114,9 @@ export default function LandingPage() {
         
         {show ? <Home /> : ''}
         <Header setRepos={setRepos} />
-        {/* <OverviewPage overviewData={overviewData} /> */}
       {!show ?  <Routes>      
           <Route path='/' element={<OverviewPage />} />
-          {/* <Route path="/" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} setRepos={setRepos} />} /> */}
+          <Route path="/path" element={<Repos repos={repos} loading={loading} currentUsers={currentUsers} prev={prev} next={next} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} disabled={disabled} disabled2={disabled2} setRepos={setRepos} />} />
           <Route path="/:repoId" element={<RepoItems setLoading={setLoading} setRepos={setRepos} handleError={handleError} />} />
           <Route path="*" element={<Noroute />} />
         </Routes> : ""}

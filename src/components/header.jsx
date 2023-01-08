@@ -32,7 +32,7 @@ export default function Header({setRepos}){
         </Link>
         <nav className={openMenu ? "unav" : "nav"}>
           <Link to="/"><li>Overview </li></Link>
-          <Link to=""><li>Repository <b>20</b></li></Link>
+          <Link to="/path"><li>Repository <b>20</b></li></Link>
           <Link to=""><li>Stars <b>10</b></li></Link>
         </nav>
         <ErrorCall boundary={boundary} error={error} setRepos={setRepos} />
